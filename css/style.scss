@@ -1,0 +1,107 @@
+
+@function pxToEm($from, $size: 16) {
+    @return $from / $size + 0em;
+  }
+
+body {
+    background: #FFFFFF;
+    margin: 0;
+    max-width: pxToEm(1440);
+    
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header_container {
+    width: pxToEm(361);
+    height: pxToEm(32);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: pxToEm(45);
+    margin: 0;
+  
+  }
+
+.top_menu a {
+    text-decoration: none;
+    padding: 0 pxToEm(9, 16);
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 400;
+    font-size: pxToEm(16);
+    line-height: 149%;
+    color: #1A1A1A;
+  }
+
+  .top_menu {
+    display: flex;
+    align-items: center;
+    height: pxToEm(32);
+    
+    
+  }
+
+  .top_menu:hover {
+    background: #3F51B5;
+  }
+
+  /* MAIN*/
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main_container {
+    width: pxToEm(361);
+    height: pxToEm(361);
+    margin-top: pxToEm(180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .image_home {
+    background-image: url(../img/image_home.jpg);
+    background-size: cover;
+    width: pxToEm(150);
+    height: pxToEm(150);
+    border-radius: 50%;
+    border: none;
+   
+    
+  }
+
+  .FnameLname_home {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: pxToEm(26);
+    line-height: pxToEm(34, 26);
+    color: #1A1A1A;
+  }
+
+  .IntroText_home {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 300;
+    font-size: pxToEm(16);
+    line-height: pxToEm(27, 16); 
+    color: #555555;
+  }
+
+  .Icons_home {
+    width: pxToEm(150);
+    height: pxToEm(18);
+  }
+
+  .seperator {
+    width: pxToEm(555);
+    border-top: pxToEm(1) solid #F0F0F0;
+  }
