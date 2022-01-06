@@ -29,7 +29,8 @@ body {
 
 .top_menu a {
     text-decoration: none;
-    padding: 0 pxToEm(9, 16);
+    padding: pxToEm(5, 16) pxToEm(9, 16);
+    margin: 0 pxToEm(10, 16);
     font-family: Roboto Mono;
     font-style: normal;
     font-weight: 400;
@@ -46,20 +47,36 @@ body {
     
   }
 
-  .top_menu:hover {
-    background: #3F51B5;
+  .top_menu > a:hover {
+    background: #0a74a5;
   }
 
-  /* MAIN*/
+  .top_menu .active {
+    background: #0a74a5;
+  }
+
+  .dropdown_link {
+    text-decoration: none;
+    display: none;
+    font-size: pxToEm(32);
+    color: #1A1A1A;
+    
+  }
+
+  #dropdown_checkbox {
+    display: none;
+  }
+
+  /* MAIN_index*/
 
   main {
     display: flex;
     justify-content: center;
   }
 
-  .main_container {
-    width: pxToEm(361);
-    height: pxToEm(361);
+  .index_main_container {
+    width: pxToEm(360);
+    height: pxToEm(400);
     margin-top: pxToEm(180);
     display: flex;
     justify-content: center;
@@ -69,13 +86,13 @@ body {
 
   .image_home {
     background-image: url(../img/image_home.jpg);
-    background-size: cover;
+    background-size:  cover;
+    background-position: center;
     width: pxToEm(150);
     height: pxToEm(150);
     border-radius: 50%;
     border: none;
-   
-    
+        
   }
 
   .FnameLname_home {
@@ -83,8 +100,10 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: pxToEm(26);
-    line-height: pxToEm(34, 26);
+    margin-top: pxToEm(5,26 );
     color: #1A1A1A;
+    display: inline-flex;
+    text-align: center;
   }
 
   .IntroText_home {
@@ -92,16 +111,142 @@ body {
     font-style: normal;
     font-weight: 300;
     font-size: pxToEm(16);
-    line-height: pxToEm(27, 16); 
+    margin-top: pxToEm(5,16 );
     color: #555555;
-  }
-
-  .Icons_home {
-    width: pxToEm(150);
-    height: pxToEm(18);
+    display: inline-flex;
+    text-align: center;
   }
 
   .seperator {
-    width: pxToEm(555);
+    width: calc(100% - 60px);
     border-top: pxToEm(1) solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Icons_home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: pxToEm(150);
+    height: pxToEm(18);
+    margin-bottom: pxToEm(40);
+    margin-top: pxToEm(25);
+  }
+
+  .Icons_home > a {
+    text-decoration: none;
+    font-size: pxToEm(20);
+    color: #1A1A1A;
+    display: flex;
+    align-items: center;
+  }
+
+  .Icons_home > a:hover {
+    box-shadow: pxToEm(2) pxToEm(2) pxToEm(2) pxToEm(2) rgba(119, 116, 116, 0.24);
+  }
+  /* MAIN_about */
+
+  .about_main_container {
+    width: pxToEm(556);
+    height: pxToEm(1178);
+  }
+
+  .about_header{
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: pxToEm(26);
+    line-height: pxToEm(34,26);
+    color: #1A1A1A; 
+    display: flex;
+    justify-content: center;
+    margin-top: pxToEm(195,26 );
+  }
+
+  .introduction_text{
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 300;
+    font-size: pxToEm(16);
+    line-height: pxToEm(27,16 );
+    color: #555555;
+    margin-top: pxToEm(26,16 );
+    text-align: justify;
+  }
+
+  /* CONTACT_about */
+
+  .contact_main_container {
+    width: pxToEm(556);
+    height: pxToEm(1178);
+  }
+
+  .contact_header{
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: pxToEm(26);
+    line-height: pxToEm(34,26);
+    color: #1A1A1A; 
+    display: flex;
+    justify-content: center;
+    margin-top: pxToEm(195,26 );
+  }
+
+  .contact_text{
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 300;
+    font-size: pxToEm(16);
+    line-height: pxToEm(27,16 );
+    color: #555555;
+    margin-top: pxToEm(26,16 );
+    text-align: justify;
+  }
+
+  /*MOBILE */
+  @media only screen and (max-width: 650px){
+    .about_main_container {
+      margin: 0 pxToEm(30);
+      
+    }
+  }
+  
+  @media only screen and (max-width: 400px){
+    /*home - subpage*/
+    .dropdown_link {
+      display: flex;
+      position: absolute;
+      top: pxToEm(15);
+      right: pxToEm(15);
+    }
+    .top_menu {
+      display: none;
+    }
+   
+    .index_main_container{
+      margin-top: pxToEm(150);
+    }
+
+    #dropdown_checkbox:checked + .top_menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #dropdown_checkbox:checked + .top_menu >a {
+      margin-bottom: pxToEm(5);
+    }
+
+    /*#dropdown_checkbox:checked main { //varbūt šo nemaz nevajag 
+      display: none;
+    }*/
+    /*home - subpage*/
+    .about_main_container {
+     margin: 0 pxToEm(30);
+    }
+  }
+
+  @media only screen and (max-width: 400px){
+
   }
