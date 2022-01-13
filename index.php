@@ -10,7 +10,7 @@ include('navigation.php');
     <div class="index_main_container">
         <div class="image_home"></div>
         <p class="FnameLname_home">Kristiāna Tatarčuka</p>
-        <p class="IntroText_home">Breaking into the IT field</p>
+        <p class="IntroText_home">Breaking into IT field</p>
         
         <div class="seperator"></div>
         
@@ -18,7 +18,7 @@ include('navigation.php');
             <a href="#" title="Gmail">
                 <span class="icon-google"></span>
             </a>
-            <a href="#" title="Linked in">
+            <a href="https://lv.linkedin.com/in/kristi%C4%81na-tatar%C4%8Duka-0669981ba" title="Linked in">
                 <span class="icon-linkedin"></span>
             </a>
             <a href="#" title="Facebook">

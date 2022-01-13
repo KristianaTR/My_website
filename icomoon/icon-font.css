@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?b6ptxd');
-  src:  url('fonts/icomoon.eot?b6ptxd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?b6ptxd') format('truetype'),
-    url('fonts/icomoon.woff?b6ptxd') format('woff'),
-    url('fonts/icomoon.svg?b6ptxd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4ug7z1');
+  src:  url('fonts/icomoon.eot?4ug7z1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4ug7z1') format('truetype'),
+    url('fonts/icomoon.woff?4ug7z1') format('woff'),
+    url('fonts/icomoon.svg?4ug7z1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,6 +30,18 @@
 }
 .icon-menu:before {
   content: "\e901";
+}
+.icon-checked:before {
+  content: "\e902";
+}
+.icon-checkmark:before {
+  content: "\e902";
+}
+.icon-tick:before {
+  content: "\e902";
+}
+.icon-checkbox:before {
+  content: "\e902";
 }
 .icon-google:before {
   content: "\ea88";
